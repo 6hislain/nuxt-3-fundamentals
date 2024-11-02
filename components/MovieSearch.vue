@@ -15,8 +15,8 @@
 </template>
 
 <script setup lang="ts">
-const query = ref("");
 const movies = ref([]);
+const query = ref("spiderman");
 
 async function search() {
   const { Search } = await $fetch(
@@ -24,6 +24,8 @@ async function search() {
   );
   movies.value = Search;
 }
+
+search();
 </script>
 
 <style scoped></style>
