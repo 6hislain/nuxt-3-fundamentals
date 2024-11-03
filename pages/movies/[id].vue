@@ -8,7 +8,7 @@
 const route = useRoute();
 
 const { data } = await useFetch(
-  `http://www.omdbapi.com/?apikey=e0207309&i=${route.params.id}`,
+  `https://www.omdbapi.com/?apikey=e0207309&i=${route.params.id}`,
   {
     pick: ["Plot", "Title", "Poster", "Error"],
     key: `/movies/${route.params.id}`,
